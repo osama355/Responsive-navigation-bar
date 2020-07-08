@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #182C61;
+    color: #f5f6fa;
+    width: 100%;
+    min-height: 55px;
+}
+
+.logo {
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+}
+
+.nav-list {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-list li a {
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #f5f6fa;
+    font-size: 1em;
+}
+
+.toogle {
+    width: 18px;
+    display: none;
+}
+
+.cross {
+    width: 18px;
+    display: none;
+}
+
+.toogle div {
+    width: 100%;
+    height: 3px;
+    background-color: #f5f6fa;
+    margin: 5px;
+}
+
+.cross div {
+    width: 100%;
+    height: 3px;
+    background-color: #f5f6fa;
+    margin: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+        font-family: 'Prompt', sans-serif;
+        letter-spacing: 2px;
+        font-size: 1.5em;
+    }
+    .nav-list {
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+    }
+    .nav-list li a {
+        font-family: 'Prompt', sans-serif;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #f5f6fa;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        overflow-x: hidden;
+    }
+    .logo {
+        font-family: 'Prompt', sans-serif;
+        letter-spacing: 1px;
+        font-size: 1.3em;
+        font-weight: lighter;
+    }
+    .nav-list {
+        position: fixed;
+        right: 0%;
+        height: 90%;
+        top: 8.5%;
+        background-color: #182C61;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .toogle {
+        display: inline-block;
+        transition: transform 0.5s ease-in;
+    }
+    .cross {
+        display: none;
+        transition: transform 0.5s ease-in;
+    }
+    .cross .l4 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .cross .l5 {
+        opacity: 0;
+    }
+    .cross .l6 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
